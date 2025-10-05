@@ -1,0 +1,14 @@
+Project Structure (expected)
+
+my-portfolio-website/
+├─ src/
+│  ├─ features/
+│  ├─ components/
+│  ├─ pages/ (or routes/)
+│  ├─ styles/
+│  └─ utils/
+├─ public/
+├─ tests/
+├─ package.json
+├─ tsconfig.json
+└─ README.md

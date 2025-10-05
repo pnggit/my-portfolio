@@ -1,0 +1,70 @@
+Skilled Technical Engineer and Leader with 15+ years of experience and a demonstrated history in the Technology and Services industry. Experience in Requirements Analysis, Business Process, Vendor Relations, IT Strategy and Business Transformation. Adept at forming solid relationships within organizations to maximize revenue and customer experience
+Skills
+• Project Planning/Scope / Cost Estimation/Risk Analysis/Execution/Maintenance   • GenAI/Agents/Vector DB • Java / J2EE • JUnit • CI/CD  • Agile  • OCI
+•  Spring/Spring Boot  •  Cassandra/Oracle/MySQL/Mongo •  MVC  •  JavaScript
+•  Microservices  / REST •  Python • Software Architecture •  Docker/Linux Operating System
+
+Work Experience
+Principal Application Developer (also Technical Manager)
+Oracle Corporation | Pleasanton, CA | Feb 2019 - Aug 2025
+
+•	Manage a team of 3 in IDC , Worked on the Architecture of the LinkedIn RSC Integration, conduct daily standups to track progress and address blockers, maintain effective communication with team, leadership, product managers and work with the Leadership for the Program Updates and Bug Reviews.
+•	Managed and led Innovation Efforts like Profile Option Automation, Translations Automation for the Fusion Ecosystem , to design and develop automation tools to improve developer productivity by 10%  across the Org
+•	Led migration of static artifacts for Oracle Recruiting Candidate Experience (ORC) to Object Storage and integrated Redux caching, improving site performance by 40% through optimized content delivery.
+•	Led migration of 4M+ candidate profiles to LinkedIn RSC, optimizing performance with Executor Framework to achieve a reduction in sync time from 30 days to 8 hours.
+•	Worked with Oracle CSSAP security team to ensure compliance of third-party integrations, audit reviews, meet security standards and address security vulnerabilities 
+•	Designed and Developed GenAI media asset library integration using OCI and REST APIs to auto-suggest job-specific assets, streamlining recruiter workflows.
+•	Implemented Embeddings API using Pinecone and Mongo DB, enabling normalized vector storage and intelligent keyword search for job matching.
+•	Developed multi-agent orchestration workflows using LangChain and LangSmith, integrating AI Agents into application processing.
+•	Designed and prototyped AI-driven Candidate Experience use cases leveraging Oracle Agent Studio, Cohere, and Llama for intelligent recommendations.
+•	Designed and developed Candidate Experience UI/UX using ReactJS, ES6, and KnockOut to enhance usability and responsiveness.
+•	Engineered a new deployment pipeline for static and front-end content, hosted on CDN with edge caching, boosting site load performance by 30% and resolving Google SEO timeout issues.
+•	Integrated LinkedIn Widgets (Profile, Recommended Matches, Connections) into ORC using Oracle ADF, Spring, and Velocity templates.
+•	Developed Python utilities for Demo Pods, automating exception key provisioning for LinkedIn setup and enabling self-service onboarding for customers.
+•	Architected LinkedIn Integration as Microservices, improving scalability, maintainability and fault isolation. 
+•	Contributed to development of Candidate Experience JET components to extend Oracle JET-based front-end functionality.
+
+Technical Lead | Sephora | San Francisco, CA
+11/2017 – 01/2019   
+•	Lead and Manage the integration of Agilence Loss Prevention system with Sephora that includes analysis of the Customer Purchases and Returns and establish a pattern that has the intelligence built for marking Fraudulent Order Alerts. In the first year after integration, we ended up saving $1M as loss prevention
+•	Design and Integrate the transaction logs from Point of Sale, SiJCP and DotCom orders, which can be used for loss prevention
+•	Assess, Evaluate vendors and Integrate( Cornerstone) the Learning module for MyLearning and negotiate contracts and support for the product used by Sephora store employees daily that improved streaming of content 
+•	Leverage S3 storage and Lifecycle management to store the daily price feed from DCs 
+•	Represented the Store Systems team at the CAB review meetings to present our case for the enhancements during the production release and get the approvals
+•	Lead, Design and Develop the HelpMe portal that is used by the Store Cast Members to submit requests for their daily store maintenance using PHP over Laravel Framework, Angular and Typescript
+•	S3 integration for storing, retrieving and lifecycle management of files
+•	Perform bi-weekly release using CI/CD Pipeline (Harness.io) and Maven for the Docker image generation/orchestration and manage the release process
+•	Version control(Source control management)of each release to cherry pick release feature
+
+Sterling Lead Consultant | LogMeIn | Mountain View, CA
+06/2016 – 11/2017
+•	Design, develop and integrate the CyberSource Payment Gateway’s Silent Post to the CorpCommerce System over IBM Sterling Framework
+•	Create new entities (sales orgs) and enable the multi-locale support
+•	Lead the Sonar code coverage integration and implemented L2 cache for frequently searched products
+•	Experienced in Development using software engineering methodologies like Agile
+•	Perform integration of the Survey Gizmo Feedback module into the checkout page using jQuery and CSS for a robust and interactive design
+•	Design and Develop Spring Boot Scheduler jobs and maintain the Cloud Config 
+•	Integrate price feed from RMS through Kafka Messaging Framework 
+•	Cassandra DB schema design and enhancements
+•	Implemented Standard Design Patterns (Design Concepts) while architecting the system 
+
+Senior Sterling Engineer | Pitney Bowes | Shelton, CT
+08/2014 – 05/2016
+•	Design, Develop and Lead the development for Order Entry, Credit Check(Rapport Webservices Call), Data Load (Item Master, Customer Master and Pricelist Load) and the Messaging Framework over IBM SSFS 9.3
+•	Migrated, 1.8M customers and 220k Items using the Customized Data Load Module using the Agent Framework and OOB ‘Manage’ APIs 
+•	Designed and developed the unified messaging framework which can be used by all the modules across the application. This was an alternate to the existing ‘fire and forget’ MQ Series Component available in Configurator, to leverage legacy messaging framework 
+•	Good Problem Solving and Analytical skills especially debugging customer issues and involving any dependent teams for the war-room calls
+•	Defined and maintained Coding Standards through peer-code reviews and followed the engineering practices, policies and guidelines set by the organization
+Application Developer | Bio-Rad | Hercules, CA
+01/2009 – 08/2014
+•	Design, Develop and maintain the e-Commerce Order Processing Engine of Bio-Rad eVolution using Sterling Multi Channel Selling Solution
+•	Internationalization of the application to support 140 countries and locales
+•	Involved in periodic updates to the Configurator Model to launch the new bio-plex (dynamic bundle) products every quarter
+
+Project Engineer | Best Buy for Business | Richfield, MN
+03/2007 – 12/2008
+•	Involved in Design and Development (enhancement) of the Address Standardization Module which interacts with an external system via webservice call
+•	Design and Develop web applications using Hibernate, Struts , JSP , JavaScript and jQuery
+•	Monitoring daily batch jobs, connection availability with other external systems like tax calculation system etc., database and application server’s memory usage, disk usage and other third party Webservices
+Education
+Bachelor of Engineering in Information Technology | Bharathiar University | India

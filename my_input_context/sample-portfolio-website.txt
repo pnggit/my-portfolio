@@ -1,0 +1,9 @@
+Base Website Configuration
+
+Site Title: [Preferred Name] Portfolio
+Tagline: [Short tagline]
+Primary Color: #0ea5e9
+Theme: light
+Navigation: Home | About | Projects | Resume | Contact
+Contact Email: you@example.com
+Social Links: https://github.com/you, https://linkedin.com/in/you

@@ -1,0 +1,33 @@
+user: Create a comprehensive `project_rules.md` document outlining the guidelines and best practices for developing the web application. Include sections for: 
+ 
+ 1. **Code Style & Standards** 
+    - Language-specific formatting rules (e.g., JavaScript/TypeScript, CSS/SCSS) 
+    - Naming conventions for variables, functions, components, and files 
+    - Code organization and file structure 
+ 
+ 2. **Development Practices** 
+    - Version control workflow (branching strategy, commit message format) 
+    - Testing requirements (unit, integration, E2E) 
+    - Documentation standards (code comments, API docs) 
+ 
+ 3. **Security Guidelines** 
+    - Authentication/authorization implementation 
+    - Data validation and sanitization 
+    - Secure communication protocols 
+ 
+ 4. **Performance Optimization** 
+    - Asset loading strategies 
+    - Caching policies 
+    - Database query optimization 
+ 
+ 5. **Accessibility Compliance** 
+    - WCAG standards implementation 
+    - Keyboard navigation 
+    - Screen reader compatibility 
+ 
+ 6. **Deployment & Maintenance** 
+    - Environment configurations 
+    - CI/CD pipeline requirements 
+    - Monitoring and logging standards 
+ 
+ Include examples where appropriate and specify any mandatory tools or frameworks to be used. The document should serve as the single source of truth for all development team members.

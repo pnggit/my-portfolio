@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio">
+  <style>
+    :root {
+      --bg: #0f172a; /* slate-900 */
+      --card: #111827; /* gray-900 */
+      --text: #e5e7eb; /* gray-200 */
+      --muted: #9ca3af; /* gray-400 */
+      --accent: #22c55e; /* green-500 */
+      --accent-2: #38bdf8; /* sky-400 */
+      --border: #1f2937; /* gray-800 */
+      --maxw: 1080px;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(56,189,248,0.15), transparent 40%),
+                  radial-gradient(1000px 600px at 90% 10%, rgba(34,197,94,0.12), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    header[role="banner"] {
+      display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center;
+      padding: 24px; border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+    }
+    .avatar { width: 120px; height: 120px; border-radius: 16px; border: 1px solid var(--border); background: var(--card); object-fit: cover; }
+    .title { margin: 0; font-size: 28px; letter-spacing: 0.2px; }
+    .subtitle { margin: 4px 0 0; color: var(--muted); }
+    nav { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 12px; }
+    nav a { padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; }
+
+    main { padding: 24px; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 2fr 1fr; } }
+
+    .card { background: color-mix(in oklab, var(--card) 92%, transparent); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    .card__header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+    .card__title { font-size: 20px; margin: 0; }
+    .card__hint { color: var(--muted); font-size: 14px; }
+    .list { margin: 0; padding-left: 20px; }
+    .list li { margin: 6px 0; }
+    .pill { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; margin: 4px 6px 0 0; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 30px; padding: 24px; color: var(--muted); }
+    :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header role="banner" class="container">
+    <img id="profilePhoto" class="avatar" src="my_input_context/profile-photo.svg" alt="Profile photo" />
+    <div>
+      <h1 id="preferredName" class="title">Your Name</h1>
+      <p class="subtitle">Software Engineer · Portfolio</p>
+      <nav aria-label="Primary">
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#languages">Languages</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <div class="grid">
+      <section id="summary" class="card" aria-labelledby="summary-title">
+        <div class="card__header">
+          <h2 id="summary-title" class="card__title">Summary</h2>
+          <span class="card__hint">Auto-filled from resume.txt</span>
+        </div>
+        <div id="summaryContent"></div>
+      </section>
+
+      <aside class="card" aria-labelledby="profile-title">
+        <div class="card__header">
+          <h2 id="profile-title" class="card__title">Profile</h2>
+        </div>
+        <div>
+          <div id="languages" aria-labelledby="languages-title">
+            <h3 id="languages-title" class="card__title" style="font-size:16px">Languages</h3>
+            <ul id="languagesList" class="list" aria-live="polite"></ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="experience" class="card" aria-labelledby="experience-title">
+      <div class="card__header">
+        <h2 id="experience-title" class="card__title">Experience</h2>
+        <span class="card__hint">Parsed from resume.txt</span>
+      </div>
+      <div id="experienceContent"></div>
+    </section>
+
+    <section id="education" class="card" aria-labelledby="education-title">
+      <div class="card__header">
+        <h2 id="education-title" class="card__title">Education</h2>
+        <span class="card__hint">From academic.txt</span>
+      </div>
+      <div id="academic"></div>
+    </section>
+
+    <section id="certifications" class="card" aria-labelledby="certifications-title">
+      <div class="card__header">
+        <h2 id="certifications-title" class="card__title">Certifications</h2>
+        <span class="card__hint">From certifications.txt</span>
+      </div>
+      <ul id="certificationsList" class="list"></ul>
+    </section>
+
+    <section id="notes" class="card" aria-labelledby="notes-title">
+      <div class="card__header">
+        <h2 id="notes-title" class="card__title">Notes</h2>
+        <span class="card__hint">Includes sample-portfolio-website.txt if present</span>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="container">© <span id="year"></span> <span id="preferredNameFooter">Your Name</span>. Built with accessibility in mind.</footer>
+
+  <script>
+    const ctxBase = 'my_input_context/';
+    const CACHE_BUSTER = String(Date.now());
+    const byId = (id) => document.getElementById(id);
+
+    function normalizeLines(text) {
+      return text.replace(/\r\n?/g, '\n');
+    }
+    async function fetchText(relPath) {
+      try {
+        const res = await fetch(ctxBase + relPath);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const txt = await res.text();
+        return txt.trim();
+      } catch (e) {
+        console.warn('Failed to load', relPath, e);
+        return '';
+      }
+    }
+
+    // Name and title
+    fetchText('preffered_name.txt').then(name => {
+      const safeName = name || 'Your Name';
+      byId('preferredName').textContent = safeName;
+      byId('preferredNameFooter').textContent = safeName;
+      document.title = safeName + ' · Portfolio';
+    });
+
+    // Profile photo fallback to PNG if SVG fails
+    const avatar = byId('profilePhoto');
+    avatar.src = ctxBase + 'profile-photo.svg?v=' + CACHE_BUSTER;
+    avatar.onerror = () => {
+      if (!avatar.dataset.fallback) {
+        avatar.dataset.fallback = '1';
+        avatar.src = ctxBase + 'profile-photo.png?v=' + CACHE_BUSTER;
+      }
+    };
+
+    // Languages
+    fetchText('languages.txt').then(txt => {
+      const list = byId('languagesList');
+      const tokens = normalizeLines(txt).split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+      if (!tokens.length) {
+        const li = document.createElement('li'); li.textContent = 'No data'; list.appendChild(li);
+        return;
+      }
+      tokens.forEach(t => { const li = document.createElement('li'); li.className = 'pill'; li.textContent = t; list.appendChild(li); });
+    });
+
+    // Academic / Education
+    fetchText('academic.txt').then(txt => {
+      const el = byId('academic');
+      const paras = normalizeLines(txt).split(/\n\n+/).map(s => s.trim()).filter(Boolean);
+      if (!paras.length) { const p = document.createElement('p'); p.textContent = 'No data'; el.appendChild(p); return; }
+      paras.forEach(p => { const para = document.createElement('p'); para.textContent = p; el.appendChild(para); });
+    });
+
+    // Certifications
+    fetchText('certifications.txt').then(txt => {
+      const el = byId('certificationsList');
+      const lines = normalizeLines(txt).split(/\n+/).map(s => s.trim()).filter(Boolean);
+      if (!lines.length) { const li = document.createElement('li'); li.textContent = 'No data'; el.appendChild(li); return; }
+      lines.forEach(line => { const li = document.createElement('li'); li.textContent = line; el.appendChild(li); });
+    });
+
+    // Resume parsing (Summary + Experience)
+    fetchText('resume.txt').then(txt => {
+      const summaryEl = byId('summaryContent');
+      const expEl = byId('experienceContent');
+      const bulletRe = /^(?:\u2022|•|\-|\*)\s*/;
+      const lines = normalizeLines(txt).split('\n');
+      const bullets = [];
+      const paragraphs = [];
+      let paraBuf = [];
+
+      for (const raw of lines) {
+        const l = raw.trim();
+        if (!l) { if (paraBuf.length) { paragraphs.push(paraBuf.join(' ')); paraBuf = []; } continue; }
+        if (bulletRe.test(l)) {
+          bullets.push(l.replace(bulletRe, ''));
+        } else {
+          paraBuf.push(l);
+        }
+      }
+      if (paraBuf.length) paragraphs.push(paraBuf.join(' '));
+
+      // Summary: first 1-2 paragraphs
+      const summaryCount = Math.min(2, paragraphs.length);
+      if (summaryCount === 0 && bullets.length) {
+        const p = document.createElement('p'); p.textContent = bullets[0]; summaryEl.appendChild(p);
+      } else {
+        for (let i = 0; i < summaryCount; i++) { const p = document.createElement('p'); p.textContent = paragraphs[i]; summaryEl.appendChild(p); }
+      }
+
+      // Experience: remaining paragraphs as items + bullet list
+      const remainingParas = paragraphs.slice(summaryCount);
+      if (remainingParas.length) {
+        const ul = document.createElement('ul'); ul.className = 'list';
+        remainingParas.forEach(p => { const li = document.createElement('li'); li.textContent = p; ul.appendChild(li); });
+        expEl.appendChild(ul);
+      }
+      if (bullets.length) {
+        const ul = document.createElement('ul'); ul.className = 'list';
+        bullets.forEach(b => { const li = document.createElement('li'); li.textContent = b; ul.appendChild(li); });
+        expEl.appendChild(ul);
+      }
+
+      if (!summaryEl.childElementCount && !expEl.childElementCount) {
+        const p = document.createElement('p'); p.textContent = 'No resume content available yet.'; summaryEl.appendChild(p);
+      }
+    });
+
+    // Optional notes
+    fetchText('sample-portfolio-website.txt').then(txt => {
+      if (!txt) return;
+      const notes = byId('notes');
+      const details = document.createElement('details');
+      const sum = document.createElement('summary'); sum.textContent = 'Additional Notes'; details.appendChild(sum);
+      const pre = document.createElement('pre'); pre.textContent = txt; details.appendChild(pre);
+      notes.appendChild(details);
+    });
+
+    // Footer year
+    byId('year').textContent = String(new Date().getFullYear());
+
+    // Helpful message if running from file:// and fetch fails
+    window.addEventListener('unhandledrejection', (e) => {
+      if (location.protocol === 'file:') {
+        console.info('If content fails to load, start a local server (e.g., Python: python3 -m http.server 8000) and open http://localhost:8000/');
+      }
+    });
+  </script>
+</body>
+</html>
